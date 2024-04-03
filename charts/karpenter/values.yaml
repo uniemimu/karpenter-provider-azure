@@ -173,6 +173,8 @@ settings:
   batchIdleDuration: 1s
   # -- Azure-specific configuration values
   azure:
+    sshPublicKey:
+    kubeletClientTLSBootstrapToken:
     # -- Cluster name.
     clusterName: ""
     # -- Cluster endpoint.

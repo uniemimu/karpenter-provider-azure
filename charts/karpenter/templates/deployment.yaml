@@ -85,6 +85,14 @@ spec:
             - name: LOG_LEVEL
               value: "{{ . }}"
           {{- end }}
+            - name: CLUSTER_ENDPOINT
+              value: "{{ .Values.settings.azure.clusterEndpoint }}"
+            - name: CLUSTER_NAME
+              value: "{{ .Values.settings.azure.clusterName }}"
+            - name: KUBELET_BOOTSTRAP_TOKEN
+              value: "{{ .Values.settings.azure.kubeletClientTLSBootstrapToken }}"
+            - name: SSH_PUBLIC_KEY
+              value: "{{ .Values.settings.azure.sshPublicKey }}"
             - name: METRICS_PORT
               value: "{{ .Values.controller.metrics.port }}"
             - name: HEALTH_PROBE_PORT
